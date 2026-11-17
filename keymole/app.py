@@ -104,6 +104,9 @@ def run_gui(args) -> int:
         print("[KeyMole] 已记住 HUB 灯效，退出时自动还原")
 
     def status_text() -> str:
+        forced = os.environ.get("KEYMOLE_STATUS")
+        if forced:                    # 出图/演示用：强制显示某个通道名
+            return forced
         if not hardware:
             return "灯效：只有屏幕（没找到可控制的键盘）　F5 重新连接"
         best = hardware[0]
@@ -427,6 +430,9 @@ def run_gui(args) -> int:
     if args.shot:
         def _do_shot() -> None:
             now = time.perf_counter()
+            if os.environ.get("KEYMOLE_SHOT_PLAY"):
+                start_game()
+                now = time.perf_counter()
             _demo_moles(game, now)
             if os.environ.get("KEYMOLE_SHOT_OVER"):  # 出图用：伪造一局结束的画面
                 game.lives = 0

@@ -183,9 +183,9 @@ class ScreenDisplay(Display):
             cx, y0 + bh + 34, text="1 / 2 / 3 或点击选择    Enter 开始    Esc 退出",
             fill=HUD_DIM, font=FONT_HUD_LABEL)
         self._menu["best"] = c.create_text(
-            cx, self.h - 26, text="", fill=HUD_ACCENT, font=FONT_HUD_LABEL)
+            cx, self.h - 38, text="", fill=HUD_ACCENT, font=FONT_HUD_LABEL)
         self._menu["status"] = c.create_text(
-            cx, self.h - 52, text="", fill=HUD_DIM, font=FONT_HUD_LABEL)
+            cx, self.h - 64, text="", fill=HUD_DIM, font=FONT_HUD_LABEL)
         self.hide_menu()
 
     def _menu_items(self) -> list:
