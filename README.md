@@ -5,6 +5,10 @@
 ![游戏预览](keymole/docs/preview.png)
 ![开始菜单](keymole/docs/menu.png)
 
+**演示视频**：[demo.mp4](keymole/docs/demo.mp4)（64 秒，1080p，讲解 + 实机）
+
+![动画演示](keymole/docs/demo.gif)
+
 纯 Python 标准库实现（tkinter 画屏幕、winsound 出声、ctypes 直接跟 HID 设备对话），
 没有任何第三方依赖。
 
